@@ -148,17 +148,6 @@ poetry run python main.py
 
 ---
 
-## Known Issues
-
-| Issue | Impact | Status |
-|-------|--------|--------|
-| Generic type parameters not fully parsed | Missing type info | Known |
-| Lambda expressions complex to analyze | Complexity underestimated | Known |
-| Annotations not extracted | Missing metadata | Known |
-| Nested classes limited support | Incomplete hierarchy | Known |
-
----
-
 ## Project Structure
 
 ```
