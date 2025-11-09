@@ -1,0 +1,3511 @@
+{
+  "metadata": {
+    "extraction_date": "2025-11-09T19:17:13.905868",
+    "total_classes": 35,
+    "total_interfaces": 7,
+    "total_methods": 242,
+    "packages": [
+      "com.sparta.engineering72.sakilaproject.entities",
+      "com.sparta.engineering72.sakilaproject",
+      "com.sparta.engineering72.sakilaproject.respositories",
+      "com.sparta.engineering72.sakilaproject.controller",
+      "com.sparta.engineering72.sakilaproject.services",
+      "com.sparta.engineering72.sakilaproject.securingweb"
+    ],
+    "avg_class_complexity": 9.99
+  },
+  "project_overview": "**Project Overview**\n\n1. **Project Purpose**: This Java application appears to be a web-based interface for managing a film rental system, likely inspired by the Sakila database schema. It provides functionality for managing staff, customers, actors, films, and rentals.\n2. **Architecture**: The project employs a layered architecture, with separate packages for entities, repositories, services, controllers, and security configuration. This suggests a Model-View-Controller (MVC) pattern, with a focus on separation of concerns.\n3. **Main Components**: Primary modules include:\n\t* Entities (e.g., `Actor`, `Customer`, `Film`)\n\t* Services (e.g., `StaffService`, `RentalService`, `CustomerService`)\n\t* Controllers (e.g., `StaffController`, `CustomerController`, `FilmController`)\n\t* Security configuration (e.g., `WebSecurityConfig`, `UserDetailsServiceImpl`)\n4. **Technology Stack**: The project uses:\n\t* Spring Framework (evident from `MvcConfig` and `WebSecurityConfig`)\n\t* Maven (indicated by `MavenWrapperDownloader`)\n\t* Java-based web development (e.g., `MainController`, `SuccessHandler`)\n5. **Code Quality**: The average complexity metric of 9.98 suggests that the codebase may be moderately complex. With 242 methods across 35 classes, the project is relatively large. However, the use of separate packages and a layered architecture indicates a well-structured approach. Further analysis would be necessary to identify potential areas for improvement, such as reducing complexity in specific methods or classes.",
+  "classes": [
+    {
+      "name": "MavenWrapperDownloader",
+      "type": "class",
+      "package": null,
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 3,
+      "field_count": 5,
+      "avg_complexity": 38.67,
+      "methods": [
+        {
+          "name": "main",
+          "signature": "static public void main(String args)",
+          "complexity": 74,
+          "modifiers": [
+            "static",
+            "public"
+          ]
+        },
+        {
+          "name": "downloadFileFromURL",
+          "signature": "private static void downloadFileFromURL(String urlString, File destination)",
+          "complexity": 38,
+          "modifiers": [
+            "private",
+            "static"
+          ]
+        },
+        {
+          "name": "getPasswordAuthentication",
+          "signature": "protected PasswordAuthentication getPasswordAuthentication()",
+          "complexity": 4,
+          "modifiers": [
+            "protected"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "WRAPPER_VERSION",
+          "type": "String",
+          "modifiers": [
+            "private",
+            "final",
+            "static"
+          ]
+        },
+        {
+          "name": "DEFAULT_DOWNLOAD_URL",
+          "type": "String",
+          "modifiers": [
+            "private",
+            "final",
+            "static"
+          ]
+        },
+        {
+          "name": "MAVEN_WRAPPER_PROPERTIES_PATH",
+          "type": "String",
+          "modifiers": [
+            "private",
+            "final",
+            "static"
+          ]
+        },
+        {
+          "name": "MAVEN_WRAPPER_JAR_PATH",
+          "type": "String",
+          "modifiers": [
+            "private",
+            "final",
+            "static"
+          ]
+        },
+        {
+          "name": "PROPERTY_NAME_WRAPPER_URL",
+          "type": "String",
+          "modifiers": [
+            "private",
+            "final",
+            "static"
+          ]
+        }
+      ],
+      "summary": "### Analysis of MavenWrapperDownloader Class\n\n#### 1. Purpose\nThe main purpose of this class is to download and manage Maven wrapper files.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Downloading Maven wrapper files from a specified URL\n- Handling password authentication for the download process\n- Managing file paths and properties related to the Maven wrapper\n\n#### 3. Key Methods\nThe most important methods in this class are:\n- `main(String args)`: The entry point of the application, responsible for initiating the download process.\n- `downloadFileFromURL(String urlString, File destination)`: Downloads a file from a specified URL to a destination file.\n- `getPasswordAuthentication()`: Provides password authentication for the download process.\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is moderate, with a complexity score of 74 for the `main` method and 38 for the `downloadFileFromURL` method. The class has a limited number of methods and fields, but the download and authentication logic may contribute to its complexity.\n\n#### 5. Design Patterns\nNo specific design patterns are explicitly identifiable from the provided information. However, the use of a `main` method and static fields suggests a simple, procedural approach to downloading and managing Maven wrapper files. The class may benefit from incorporating design patterns such as the Singleton pattern for managing the Maven wrapper instance or the Factory pattern for creating different types of downloaders."
+    },
+    {
+      "name": "MockTests",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 28,
+      "field_count": 16,
+      "avg_complexity": 22.79,
+      "methods": [
+        {
+          "name": "init",
+          "signature": "public void init()",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testActorById",
+          "signature": "public void testActorById()",
+          "complexity": 18,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testActorByFirstName",
+          "signature": "public void testActorByFirstName()",
+          "complexity": 18,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testActorByLastName",
+          "signature": "public void testActorByLastName()",
+          "complexity": 18,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testActorByMore",
+          "signature": "public void testActorByMore()",
+          "complexity": 23,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testActorByFullName",
+          "signature": "public void testActorByFullName()",
+          "complexity": 26,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilmByID",
+          "signature": "public void testFilmByID()",
+          "complexity": 22,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilmByDescritption",
+          "signature": "public void testFilmByDescritption()",
+          "complexity": 18,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilmByRating",
+          "signature": "public void testFilmByRating()",
+          "complexity": 18,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilmByLength",
+          "signature": "public void testFilmByLength()",
+          "complexity": 18,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilmByName",
+          "signature": "public void testFilmByName()",
+          "complexity": 18,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilmByDescription",
+          "signature": "public void testFilmByDescription()",
+          "complexity": 17,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilms",
+          "signature": "public void testFilms()",
+          "complexity": 49,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCategoryById",
+          "signature": "public void testCategoryById()",
+          "complexity": 16,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCategoryByName",
+          "signature": "public void testCategoryByName()",
+          "complexity": 17,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCustomerById",
+          "signature": "public void testCustomerById()",
+          "complexity": 15,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCustomer",
+          "signature": "public void testCustomer()",
+          "complexity": 38,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testStaff",
+          "signature": "public void testStaff()",
+          "complexity": 49,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilmController",
+          "signature": "public void testFilmController()",
+          "complexity": 16,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testFilmController2",
+          "signature": "public void testFilmController2()",
+          "complexity": 16,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCategory",
+          "signature": "public void testCategory()",
+          "complexity": 14,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCategory2",
+          "signature": "public void testCategory2()",
+          "complexity": 13,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testActorController1",
+          "signature": "public void testActorController1()",
+          "complexity": 15,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCustomerController",
+          "signature": "public void testCustomerController()",
+          "complexity": 17,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCustomerController2",
+          "signature": "public void testCustomerController2()",
+          "complexity": 16,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testInventory",
+          "signature": "public void testInventory()",
+          "complexity": 44,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testRental",
+          "signature": "public void testRental()",
+          "complexity": 65,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "testCategoryByTimeStamp",
+          "signature": "public void testCategoryByTimeStamp()",
+          "complexity": 21,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "actorRepository",
+          "type": "ActorRepository",
+          "modifiers": []
+        },
+        {
+          "name": "filmRepository",
+          "type": "FilmRepository",
+          "modifiers": []
+        },
+        {
+          "name": "customerRepository",
+          "type": "CustomerRepository",
+          "modifiers": []
+        },
+        {
+          "name": "categoryRepository",
+          "type": "CategoryRepository",
+          "modifiers": []
+        },
+        {
+          "name": "staffRepository",
+          "type": "StaffRepository",
+          "modifiers": []
+        },
+        {
+          "name": "rentalRepository",
+          "type": "RentalRepository",
+          "modifiers": []
+        },
+        {
+          "name": "inventoryRepository",
+          "type": "InventoryRepository",
+          "modifiers": []
+        },
+        {
+          "name": "actorService",
+          "type": "ActorService",
+          "modifiers": []
+        },
+        {
+          "name": "categoryService",
+          "type": "CategoryService",
+          "modifiers": []
+        },
+        {
+          "name": "filmService",
+          "type": "FilmService",
+          "modifiers": []
+        },
+        {
+          "name": "customerService",
+          "type": "CustomerService",
+          "modifiers": []
+        },
+        {
+          "name": "inventoryService",
+          "type": "InventoryService",
+          "modifiers": []
+        },
+        {
+          "name": "rentalService",
+          "type": "RentalService",
+          "modifiers": []
+        },
+        {
+          "name": "actorController",
+          "type": "ActorController",
+          "modifiers": []
+        },
+        {
+          "name": "filmController",
+          "type": "FilmController",
+          "modifiers": []
+        },
+        {
+          "name": "categoryController",
+          "type": "CategoryController",
+          "modifiers": []
+        }
+      ],
+      "summary": "### Analysis of the MockTests Class\n\n#### 1. Purpose\nThe main purpose of this class is to perform mock tests on various entities and services, likely in the context of a film rental system.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Testing actor, film, customer, category, staff, rental, and inventory services and controllers.\n- Verifying the functionality of repositories for these entities.\n\n#### 3. Key Methods\nThe most important methods in this class are:\n- `testActorById()`: Tests retrieving an actor by their ID.\n- `testFilmByID()`: Tests retrieving a film by its ID.\n- `testCustomerById()`: Tests retrieving a customer by their ID.\n- `testRental()`: Tests the rental service, which has the highest complexity.\n- `testFilms()`: Tests film-related services, which also has high complexity.\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is high due to the large number of test methods (over 25) and the varying complexity levels of these methods (ranging from 13 to 65). Methods like `testRental()` and `testFilms()` have particularly high complexity, indicating they might be testing complex logic or multiple scenarios.\n\n#### 5. Design Patterns\nThis class appears to utilize the **Repository Pattern** (e.g., `ActorRepository`, `FilmRepository`) for data access and the **Service Pattern** (e.g., `ActorService`, `FilmService`) for business logic. The use of controllers (e.g., `ActorController`, `FilmController`) suggests a **MVC (Model-View-Controller) Pattern** for handling requests and responses."
+    },
+    {
+      "name": "SakilaProjectApplicationTests",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 3,
+      "field_count": 0,
+      "avg_complexity": 8.0,
+      "methods": [
+        {
+          "name": "MainController1",
+          "signature": "public void MainController1()",
+          "complexity": 8,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "MainController2",
+          "signature": "public void MainController2()",
+          "complexity": 8,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "MainController3",
+          "signature": "public void MainController3()",
+          "complexity": 8,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [],
+      "summary": "### Analysis of SakilaProjectApplicationTests Class\n\n1. **Purpose**: The main purpose of this class is to contain test cases for the Sakila project application.\n2. **Responsibilities**: The key responsibilities of this class are to test the functionality of the MainController in different scenarios.\n3. **Key Methods**: The most important methods in this class are:\n   * `MainController1()`: Tests the first scenario of the MainController.\n   * `MainController2()`: Tests the second scenario of the MainController.\n   * `MainController3()`: Tests the third scenario of the MainController.\n4. **Complexity Assessment**: The overall complexity of this class is moderate, with each method having a complexity of 8. This suggests that the methods are not overly simple but also not extremely complex.\n5. **Design Patterns**: No specific design patterns are evident in this class, as it appears to be a simple test class with no complex interactions or relationships between objects. However, it may be using the JUnit testing framework, which follows the xUnit testing pattern."
+    },
+    {
+      "name": "SakilaProjectApplication",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 1,
+      "field_count": 0,
+      "avg_complexity": 4.0,
+      "methods": [
+        {
+          "name": "main",
+          "signature": "static public void main(String args)",
+          "complexity": 4,
+          "modifiers": [
+            "static",
+            "public"
+          ]
+        }
+      ],
+      "fields": [],
+      "summary": "### Analysis of SakilaProjectApplication Java Class\n\n1. **Purpose**: The main purpose of this class is to serve as the entry point of the application, likely a Java-based project.\n2. **Responsibilities**: The key responsibility of this class is to initiate the application's execution.\n3. **Key Methods**: \n   - `main(String args)`: The primary method where the application starts execution. It has a complexity of 4, indicating some level of logic or operations within it.\n4. **Complexity Assessment**: The overall complexity of this class appears to be low to moderate, given that it only contains a single method. However, the `main` method itself has a complexity of 4, suggesting it may contain some intricate logic or initialization code.\n5. **Design Patterns**: No specific design patterns are immediately identifiable from the provided information, as the class structure and method implementation details are not fully disclosed. It seems to follow a basic application entry point pattern, but further details are needed to identify any specific design patterns."
+    },
+    {
+      "name": "WebSecurityConfig",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.securingweb",
+      "extends": "WebSecurityConfigurerAdapter",
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 5,
+      "field_count": 3,
+      "avg_complexity": 10.2,
+      "methods": [
+        {
+          "name": "configure",
+          "signature": "protected void configure(HttpSecurity http)",
+          "complexity": 36,
+          "modifiers": [
+            "protected"
+          ]
+        },
+        {
+          "name": "userDetailsService",
+          "signature": "public UserDetailsService userDetailsService()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "passwordEncoder",
+          "signature": "public PasswordEncoder passwordEncoder()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "authenticationProvider",
+          "signature": "public DaoAuthenticationProvider authenticationProvider()",
+          "complexity": 8,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "configure",
+          "signature": "protected void configure(AuthenticationManagerBuilder auth)",
+          "complexity": 3,
+          "modifiers": [
+            "protected"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "customerService",
+          "type": "CustomerService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "staffService",
+          "type": "StaffService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "successHandler",
+          "type": "SuccessHandler",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of WebSecurityConfig Class\n\n#### 1. Purpose\nThe main purpose of this class is to configure web security settings for a Java-based web application, likely using the Spring Security framework.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Configuring HTTP security settings\n- Defining authentication providers and password encoders\n- Integrating with user detail services\n\n#### 3. Key Methods\nThe most important methods in this class are:\n- `configure(HttpSecurity http)`: Configures HTTP security settings, with a high complexity score indicating it may contain significant logic for securing the application.\n- `userDetailsService()`: Provides a user detail service, crucial for authentication.\n- `authenticationProvider()`: Defines an authentication provider, which is essential for verifying user credentials.\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is moderate to high, with the `configure(HttpSecurity http)` method having the highest complexity score. This suggests that the security configuration logic is intricate and may require careful review and maintenance.\n\n#### 5. Design Patterns\nThis class appears to utilize the **Adapter Pattern** (through extending `WebSecurityConfigurerAdapter`) and possibly the **Dependency Injection Pattern** (given the private fields for services and handlers). The use of Spring Security framework itself is an example of the **Framework Pattern**, providing a structured approach to security configuration."
+    },
+    {
+      "name": "SuccessHandler",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.securingweb",
+      "extends": null,
+      "implements": [
+        "AuthenticationSuccessHandler"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 1,
+      "field_count": 1,
+      "avg_complexity": 27.0,
+      "methods": [
+        {
+          "name": "onAuthenticationSuccess",
+          "signature": "public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)",
+          "complexity": 27,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "redirectStrategy",
+          "type": "RedirectStrategy",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of SuccessHandler Java Class\n\n1. **Purpose**: The main purpose of this class is to handle successful authentication events.\n2. **Responsibilities**: Its key responsibilities include redirecting users after successful authentication and implementing the `AuthenticationSuccessHandler` interface.\n3. **Key Methods**:\n   - `onAuthenticationSuccess`: Handles successful authentication by redirecting the user.\n4. **Complexity Assessment**: The class has a moderate complexity level, with a single method (`onAuthenticationSuccess`) having a complexity of 27, indicating some conditional logic or nested structures.\n5. **Design Patterns**: The class uses the **Strategy Pattern**, as evidenced by the `RedirectStrategy` field, allowing for different redirect strategies to be implemented and injected into the `SuccessHandler` class."
+    },
+    {
+      "name": "MvcConfig",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.securingweb",
+      "extends": null,
+      "implements": [
+        "WebMvcConfigurer"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 1,
+      "field_count": 0,
+      "avg_complexity": 13.0,
+      "methods": [
+        {
+          "name": "addViewControllers",
+          "signature": "public void addViewControllers(ViewControllerRegistry registry)",
+          "complexity": 13,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [],
+      "summary": "### Analysis of MvcConfig Java Class\n\n1. **Purpose**: The main purpose of this class is to configure MVC (Model-View-Controller) settings for a web application.\n2. **Responsibilities**: Its key responsibilities include customizing the MVC configuration, such as adding view controllers.\n3. **Key Methods**: \n   - `addViewControllers(ViewControllerRegistry registry)`: This method is used to add view controllers to the registry, allowing for custom mapping of URLs to views.\n4. **Complexity Assessment**: The overall complexity of this class appears to be moderate, with a single method (`addViewControllers`) having a complexity of 13, indicating some level of logic or conditional statements within it.\n5. **Design Patterns**: This class implements the `WebMvcConfigurer` interface, which is part of the Spring Framework's configuration mechanism, suggesting the use of the **Strategy Pattern** or **Template Method Pattern** for configuring MVC settings."
+    },
+    {
+      "name": "UserDetailsServiceImpl",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.securingweb",
+      "extends": null,
+      "implements": [
+        "UserDetailsService"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 1,
+      "field_count": 2,
+      "avg_complexity": 34.0,
+      "methods": [
+        {
+          "name": "loadUserByUsername",
+          "signature": "public UserDetails loadUserByUsername(String anyUsername)",
+          "complexity": 34,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "customerRepository",
+          "type": "CustomerRepository",
+          "modifiers": []
+        },
+        {
+          "name": "staffRepository",
+          "type": "StaffRepository",
+          "modifiers": []
+        }
+      ],
+      "summary": "### Analysis of `UserDetailsServiceImpl` Class\n\n1. **Purpose**: The main purpose of this class is to provide user details, likely for authentication and authorization purposes, by implementing the `UserDetailsService` interface.\n2. **Responsibilities**: The key responsibilities of this class include loading user details by username and interacting with customer and staff repositories.\n3. **Key Methods**:\n   - `loadUserByUsername(String anyUsername)`: This method is responsible for loading user details based on the provided username. It has a complexity of 34, indicating a moderate level of complexity.\n4. **Complexity Assessment**: The overall complexity of this class appears to be moderate, primarily due to the `loadUserByUsername` method. However, without the method's implementation details, it's difficult to provide a more precise assessment.\n5. **Design Patterns**: The class seems to utilize the **Repository Pattern** through its interactions with `CustomerRepository` and `StaffRepository`, which helps to abstract data access and improve maintainability. Additionally, it implements the `UserDetailsService` interface, which could be part of a larger **Strategy Pattern** or **Template Method Pattern** for handling user authentication and authorization logic."
+    },
+    {
+      "name": "FailureHandler",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.securingweb",
+      "extends": null,
+      "implements": [
+        "AccessDeniedHandler"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 1,
+      "field_count": 0,
+      "avg_complexity": 4.0,
+      "methods": [
+        {
+          "name": "handle",
+          "signature": "public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [],
+      "summary": "### Analysis of FailureHandler Java Class\n\n1. **Purpose**: The main purpose of this class is to handle access denied exceptions in a web application.\n2. **Responsibilities**: The key responsibility of this class is to manage and respond to access denied exceptions, ensuring a proper response is sent to the client.\n3. **Key Methods**:\n   - `handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException e)`: This method is responsible for handling access denied exceptions. It takes the HTTP request, response, and the exception as parameters.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low, with a complexity score of 4 for its primary method. This suggests that the class has a focused and straightforward implementation.\n5. **Design Patterns**: This class appears to utilize the **Strategy Pattern** or **Handler Pattern**, as it implements the `AccessDeniedHandler` interface, allowing it to be used as a handler for access denied exceptions in a larger application framework."
+    },
+    {
+      "name": "StaffController",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.controller",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 1,
+      "field_count": 3,
+      "avg_complexity": 20.0,
+      "methods": [
+        {
+          "name": "currentUser",
+          "signature": "public String currentUser(ModelMap modelMap, HttpServletRequest request)",
+          "complexity": 20,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "staffService",
+          "type": "StaffService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "customerService",
+          "type": "CustomerService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "inventoryService",
+          "type": "InventoryService",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of StaffController Java Class\n\n1. **Purpose**: The main purpose of this class is to handle staff-related operations, likely in a web application.\n2. **Responsibilities**: The key responsibilities of this class include managing staff data, interacting with services, and handling HTTP requests.\n3. **Key Methods**: \n   * `currentUser(ModelMap modelMap, HttpServletRequest request)`: Handles the current user, possibly for authentication or authorization purposes.\n   * (No other methods are provided in the given data, but it's expected to have more methods for a fully functional controller.)\n4. **Complexity Assessment**: The overall complexity of this class appears to be moderate, with a complexity score of 20 for the `currentUser` method. However, without more methods, it's difficult to assess the full complexity.\n5. **Design Patterns**: \n   * **Dependency Injection**: The class uses private fields for services (e.g., `staffService`, `customerService`), which might be injected through a constructor or setter methods, following the Dependency Injection pattern.\n   * **MVC (Model-View-Controller)**: The class is named `StaffController`, suggesting it's part of an MVC architecture, where it handles requests and interacts with models (services) and views."
+    },
+    {
+      "name": "CustomerController",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.controller",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 3,
+      "field_count": 4,
+      "avg_complexity": 34.0,
+      "methods": [
+        {
+          "name": "currentUser",
+          "signature": "public String currentUser(ModelMap modelMap, HttpServletRequest request)",
+          "complexity": 37,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCustomers",
+          "signature": "public String getCustomers(ModelMap modelMap, String firstNameFilter, String lastNameFilter)",
+          "complexity": 30,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "showUsersRentalHistory",
+          "signature": "public String showUsersRentalHistory(ModelMap modelMap, int id)",
+          "complexity": 35,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "customerService",
+          "type": "CustomerService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "rentalService",
+          "type": "RentalService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "inventoryService",
+          "type": "InventoryService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "filmService",
+          "type": "FilmService",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of CustomerController Java Class\n\n#### 1. Purpose\nThe main purpose of this class is to handle customer-related operations, serving as a controller in a web application.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include managing customer data, retrieving customer information, and handling rental history.\n\n#### 3. Key Methods\n- `currentUser(ModelMap modelMap, HttpServletRequest request)`: Retrieves the current user.\n- `getCustomers(ModelMap modelMap, String firstNameFilter, String lastNameFilter)`: Fetches customers based on filters.\n- `showUsersRentalHistory(ModelMap modelMap, int id)`: Displays a user's rental history.\n\n#### 4. Complexity Assessment\nThe class has a moderate complexity level, with method complexities ranging from 30 to 37. This suggests that the methods are relatively straightforward but may involve some conditional logic or data processing.\n\n#### 5. Design Patterns\nThis class appears to follow the **Service-Controller** pattern, where the controller (CustomerController) delegates business logic to service classes (CustomerService, RentalService, InventoryService, FilmService). This pattern helps in separating concerns and promoting code reusability."
+    },
+    {
+      "name": "ActorController",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.controller",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 4,
+      "field_count": 2,
+      "avg_complexity": 12.5,
+      "methods": [
+        {
+          "name": "getActors",
+          "signature": "public String getActors(ModelMap modelMap, String firstNameFilter, String lastNameFilter)",
+          "complexity": 30,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActorFilmDetails",
+          "signature": "public String getActorFilmDetails(ModelMap modelMap, Integer id)",
+          "complexity": 10,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "findActorById",
+          "signature": "public Actor findActorById(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActorFullNameFromID",
+          "signature": "public String getActorFullNameFromID(Integer id)",
+          "complexity": 7,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "filmService",
+          "type": "FilmService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "actorService",
+          "type": "ActorService",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of ActorController Java Class\n\n1. **Purpose**: The main purpose of this class is to manage actor-related data and operations, serving as a controller in a larger application, likely a web application.\n2. **Responsibilities**: The key responsibilities of this class include retrieving actor information, fetching film details for specific actors, and providing full names of actors based on their IDs.\n3. **Key Methods**:\n   - `getActors(ModelMap modelMap, String firstNameFilter, String lastNameFilter)`: Retrieves actors based on first and last name filters.\n   - `getActorFilmDetails(ModelMap modelMap, Integer id)`: Fetches film details for a specific actor by ID.\n   - `findActorById(Integer id)`: Finds an actor by their ID.\n4. **Complexity Assessment**: The overall complexity of this class is moderate, with the `getActors` method having the highest complexity (30). This suggests that the method might involve complex logic or multiple database queries.\n5. **Design Patterns**: This class appears to follow the **Service-Controller Pattern**, where the controller (`ActorController`) delegates business logic to service classes (`FilmService` and `ActorService`), keeping the controller focused on handling requests and responses."
+    },
+    {
+      "name": "MainController",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.controller",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 3,
+      "field_count": 0,
+      "avg_complexity": 2.0,
+      "methods": [
+        {
+          "name": "home",
+          "signature": "public String home()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "login",
+          "signature": "public String login()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "account",
+          "signature": "public String account()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [],
+      "summary": "### Analysis of MainController Java Class\n\n1. **Purpose**: The main purpose of this class is to handle HTTP requests and return corresponding views, likely in a web application.\n2. **Responsibilities**: The key responsibilities of this class are to manage user navigation and provide access to different pages or features of the application.\n3. **Key Methods**: The most important methods in this class are:\n   * `home()`: Handles the home page request.\n   * `login()`: Handles the login page request.\n   * `account()`: Handles the account page request.\n4. **Complexity Assessment**: The overall complexity of this class is **low**, with a complexity score of 2 for each method, indicating simple implementations.\n5. **Design Patterns**: No specific design patterns are explicitly identifiable from the provided information, but it appears to follow a basic **MVC (Model-View-Controller)** pattern, where this class acts as a controller."
+    },
+    {
+      "name": "CategoryController",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.controller",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 3,
+      "field_count": 2,
+      "avg_complexity": 6.0,
+      "methods": [
+        {
+          "name": "getCategories",
+          "signature": "public String getCategories(ModelMap modelMap)",
+          "complexity": 5,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCategoryDetails",
+          "signature": "public String getCategoryDetails(ModelMap modelMap, Integer id)",
+          "complexity": 10,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCategoryById",
+          "signature": "public Category getCategoryById(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "filmService",
+          "type": "FilmService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "categoryService",
+          "type": "CategoryService",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of CategoryController Java Class\n\n1. **Purpose**: The main purpose of this class is to handle category-related operations, likely in a web application.\n2. **Responsibilities**: The key responsibilities of this class include retrieving categories, fetching category details, and interacting with category and film services.\n3. **Key Methods**:\n   * `getCategories(ModelMap modelMap)`: Retrieves a list of categories.\n   * `getCategoryDetails(ModelMap modelMap, Integer id)`: Fetches details of a specific category by ID.\n   * `getCategoryById(Integer id)`: Retrieves a category object by its ID.\n4. **Complexity Assessment**: The overall complexity of this class is moderate, with method complexities ranging from 3 to 10. The `getCategoryDetails` method has the highest complexity, indicating potential for refactoring or optimization.\n5. **Design Patterns**: This class appears to follow the **Service-Controller** pattern, where the controller (CategoryController) delegates business logic to services (CategoryService and FilmService). Additionally, it may be part of a **Model-View-Controller (MVC)** architecture, given the use of `ModelMap`."
+    },
+    {
+      "name": "FilmController",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.controller",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 7,
+      "field_count": 4,
+      "avg_complexity": 15.43,
+      "methods": [
+        {
+          "name": "getFilms",
+          "signature": "public String getFilms(ModelMap modelMap, String filter)",
+          "complexity": 19,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmDetails",
+          "signature": "public String getFilmDetails(ModelMap modelMap, Integer id)",
+          "complexity": 15,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "rentFilm",
+          "signature": "public String rentFilm(ModelMap modelMap, Principal principal, int filmid)",
+          "complexity": 27,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmDetails",
+          "signature": "public String getFilmDetails(ModelMap modelMap, String filter)",
+          "complexity": 29,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "showEditProductPage",
+          "signature": "public ModelAndView showEditProductPage(int id)",
+          "complexity": 11,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "deleteProduct",
+          "signature": "public String deleteProduct(int id)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "findFilmByID",
+          "signature": "public Film findFilmByID(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "filmService",
+          "type": "FilmService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "inventoryService",
+          "type": "InventoryService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "rentalService",
+          "type": "RentalService",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "customerService",
+          "type": "CustomerService",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of FilmController Java Class\n\n#### 1. Purpose\nThe main purpose of this class is to handle film-related operations, acting as a controller in a web application.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include managing film data, handling film rentals, and interacting with various services (film, inventory, rental, customer).\n\n#### 3. Key Methods\n- `getFilms(ModelMap modelMap, String filter)`: Retrieves films based on a filter.\n- `rentFilm(ModelMap modelMap, Principal principal, int filmid)`: Handles the rental of a film by a user.\n- `getFilmDetails(ModelMap modelMap, Integer id)`: Fetches details of a specific film by its ID.\n\n#### 4. Complexity Assessment\nThe class has a moderate to high complexity due to the variety of methods and interactions with multiple services. The complexity is further indicated by the method complexity metrics, with `rentFilm` and `getFilmDetails` (with a `String filter`) having the highest complexity.\n\n#### 5. Design Patterns\nThis class appears to follow the **MVC (Model-View-Controller) pattern**, where it acts as the controller, interacting with models (services) and views (not shown in this analysis). Additionally, it uses **Dependency Injection** for its services (film, inventory, rental, customer), which are private fields."
+    },
+    {
+      "name": "StaffService",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.services",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 2,
+      "field_count": 1,
+      "avg_complexity": 2.5,
+      "methods": [
+        {
+          "name": "getAllStaff",
+          "signature": "public List getAllStaff()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getStaffByUsername",
+          "signature": "public Staff getStaffByUsername(String username)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "staffRepository",
+          "type": "StaffRepository",
+          "modifiers": [
+            "private",
+            "final"
+          ]
+        }
+      ],
+      "summary": "### Analysis of StaffService Java Class\n\n1. **Purpose**: The main purpose of this class is to provide a service layer for managing staff data.\n2. **Responsibilities**: The key responsibilities of this class include retrieving staff data and providing access to staff information.\n3. **Key Methods**:\n   * `getAllStaff()`: Retrieves a list of all staff members.\n   * `getStaffByUsername(String username)`: Retrieves a staff member by their username.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low, with a maximum method complexity of 3, indicating simple and straightforward logic.\n5. **Design Patterns**: This class appears to follow the **Repository Pattern**, where the `staffRepository` field encapsulates data access and manipulation, and the `StaffService` class provides a layer of abstraction and business logic on top of the repository. Additionally, it may be part of a larger **Service Layer Pattern**, which separates the business logic from the presentation and data access layers."
+    },
+    {
+      "name": "RentalService",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.services",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 2,
+      "field_count": 1,
+      "avg_complexity": 12.0,
+      "methods": [
+        {
+          "name": "getRentalsByCustomer",
+          "signature": "public List getRentalsByCustomer(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "addRental",
+          "signature": "public void addRental(int inventoryId, int customerId, Timestamp returnDate)",
+          "complexity": 21,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "rentalRepository",
+          "type": "RentalRepository",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of RentalService Class\n\n1. **Purpose**: The main purpose of this class is to manage rental operations, providing a service layer for interacting with rental data.\n2. **Responsibilities**: The key responsibilities of this class include retrieving rental information and adding new rentals.\n3. **Key Methods**:\n   - `getRentalsByCustomer(Integer id)`: Retrieves a list of rentals associated with a specific customer.\n   - `addRental(int inventoryId, int customerId, Timestamp returnDate)`: Adds a new rental with the specified inventory ID, customer ID, and return date.\n4. **Complexity Assessment**: The overall complexity of this class appears to be moderate, with the `addRental` method having a higher complexity (21) compared to `getRentalsByCustomer` (3). This suggests that the rental addition process involves more intricate logic or interactions.\n5. **Design Patterns**: This class seems to follow the **Repository Pattern**, as indicated by the presence of a `rentalRepository` field, which suggests that data access and manipulation are abstracted and handled through this repository. Additionally, it may be part of a **Service Layer Pattern**, where it acts as an intermediary between the business logic and the data access layer."
+    },
+    {
+      "name": "InventoryService",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.services",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 4,
+      "field_count": 1,
+      "avg_complexity": 2.5,
+      "methods": [
+        {
+          "name": "getAllInventory",
+          "signature": "public List getAllInventory()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getInventoriesById",
+          "signature": "public Inventory getInventoriesById(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "deleteInventoryItemById",
+          "signature": "public void deleteInventoryItemById(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getInventoryCount",
+          "signature": "public Integer getInventoryCount()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "inventoryRepository",
+          "type": "InventoryRepository",
+          "modifiers": [
+            "private",
+            "final"
+          ]
+        }
+      ],
+      "summary": "### Analysis of InventoryService Class\n\n1. **Purpose**: The main purpose of this class is to manage inventory-related operations, providing a service layer for inventory data access and manipulation.\n2. **Responsibilities**: The key responsibilities of this class include retrieving, deleting, and counting inventory items, serving as an intermediary between the business logic and data storage.\n3. **Key Methods**:\n   - `getAllInventory()`: Retrieves all inventory items.\n   - `getInventoriesById(Integer id)`: Fetches a specific inventory item by its ID.\n   - `deleteInventoryItemById(Integer id)`: Deletes an inventory item based on its ID.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low to moderate, with method complexities ranging from 2 to 3, indicating straightforward and manageable logic.\n5. **Design Patterns**: This class appears to utilize the **Repository Pattern** through its `inventoryRepository` field, which encapsulates data access and manipulation, promoting decoupling and testability. Additionally, it follows the **Service Layer Pattern**, acting as an abstraction layer between the business logic and data access, enhancing maintainability and scalability."
+    },
+    {
+      "name": "CustomerService",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.services",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 8,
+      "field_count": 1,
+      "avg_complexity": 2.88,
+      "methods": [
+        {
+          "name": "getAllCustomers",
+          "signature": "public List getAllCustomers()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCustomersByFirstName",
+          "signature": "public List getCustomersByFirstName(String firstName)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCustomersByLastName",
+          "signature": "public List getCustomersByLastName(String lastName)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCustomersByFullName",
+          "signature": "public List getCustomersByFullName(String firstName, String lastName)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCustomerByID",
+          "signature": "public Customer getCustomerByID(int id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCustomerByEmail",
+          "signature": "public Customer getCustomerByEmail(String email)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "save",
+          "signature": "public void save(Customer customer)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCustomerCount",
+          "signature": "public Integer getCustomerCount()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "customerRepository",
+          "type": "CustomerRepository",
+          "modifiers": [
+            "private",
+            "final"
+          ]
+        }
+      ],
+      "summary": "### Analysis of CustomerService Class\n\n1. **Purpose**: The main purpose of this class is to provide a service layer for managing customer data, encapsulating business logic and interacting with a data repository.\n2. **Responsibilities**: The key responsibilities of this class include retrieving, saving, and counting customer data, as well as providing various methods for filtering and accessing customer information.\n3. **Key Methods**:\n   * `getAllCustomers()`: Retrieves a list of all customers.\n   * `getCustomerByID(int id)`: Retrieves a customer by their unique ID.\n   * `save(Customer customer)`: Saves a customer to the repository.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low to moderate, with most methods having a complexity of 2 or 3. The highest complexity is 4 for the `getCustomersByFullName` method, indicating some conditional logic or data processing.\n5. **Design Patterns**: This class appears to follow the **Repository Pattern**, where the `customerRepository` field encapsulates data access and manipulation, and the `CustomerService` class provides a layer of abstraction and business logic on top of the repository. Additionally, it may be part of a larger **Service-Oriented Architecture** or **MVC (Model-View-Controller)** pattern, depending on the broader application context."
+    },
+    {
+      "name": "CategoryService",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.services",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 2,
+      "field_count": 1,
+      "avg_complexity": 2.5,
+      "methods": [
+        {
+          "name": "getAllCategories",
+          "signature": "public List getAllCategories()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getByCategoryId",
+          "signature": "public Category getByCategoryId(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "categoryRepository",
+          "type": "CategoryRepository",
+          "modifiers": [
+            "private",
+            "final"
+          ]
+        }
+      ],
+      "summary": "### Analysis of CategoryService Java Class\n\n1. **Purpose**: The main purpose of this class is to provide a service layer for managing categories, acting as an intermediary between the business logic and data access layers.\n2. **Responsibilities**: The key responsibilities of this class include retrieving and providing category data, encapsulating the underlying data access logic, and potentially implementing business rules related to categories.\n3. **Key Methods**:\n   - `getAllCategories()`: Retrieves a list of all categories.\n   - `getByCategoryId(Integer id)`: Fetches a specific category by its ID.\n4. **Complexity Assessment**: The overall complexity of this class appears to be low to moderate, with a complexity score of 2 and 3 for its methods, indicating straightforward logic without deeply nested conditions or complex algorithms.\n5. **Design Patterns**: This class seems to follow the **Repository Pattern** (through the use of `CategoryRepository`) and the **Service Layer Pattern**, where it acts as a service layer that abstracts the business logic and data access for categories."
+    },
+    {
+      "name": "ActorService",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.services",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 6,
+      "field_count": 1,
+      "avg_complexity": 3.67,
+      "methods": [
+        {
+          "name": "getAllActors",
+          "signature": "public List getAllActors()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActorByID",
+          "signature": "public Actor getActorByID(int id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActorsByFullName",
+          "signature": "public List getActorsByFullName(String firstName, String lastName)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActorsByFirstName",
+          "signature": "public List getActorsByFirstName(String firstName)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActorsByLastName",
+          "signature": "public List getActorsByLastName(String lastName)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActorFullNameFromID",
+          "signature": "public String getActorFullNameFromID(Integer id)",
+          "complexity": 7,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "actorRepository",
+          "type": "ActorRepository",
+          "modifiers": [
+            "private",
+            "final"
+          ]
+        }
+      ],
+      "summary": "### Analysis of ActorService Java Class\n\n#### 1. Purpose\nThe main purpose of this class is to provide a service layer for managing actor data, encapsulating data access and retrieval logic.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Retrieving actor data from a repository\n- Providing various methods for querying actors based on different criteria\n- Encapsulating data access logic for actors\n\n#### 3. Key Methods\nThe most important methods in this class are:\n- `getAllActors()`: Retrieves a list of all actors\n- `getActorByID(int id)`: Retrieves an actor by their ID\n- `getActorFullNameFromID(Integer id)`: Retrieves an actor's full name by their ID, which seems to be the most complex operation\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is moderate, with method complexities ranging from 2 to 7. The `getActorFullNameFromID(Integer id)` method stands out with a complexity of 7, suggesting it may involve additional logic or dependencies that increase its complexity.\n\n#### 5. Design Patterns\nThis class appears to utilize the **Repository Pattern** through its use of an `ActorRepository` field, which encapsulates data access and manipulation. The class itself can be seen as part of a **Service Layer** in a larger application architecture, mediating between business logic and data access."
+    },
+    {
+      "name": "FilmService",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.services",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 9,
+      "field_count": 1,
+      "avg_complexity": 2.78,
+      "methods": [
+        {
+          "name": "getAllFilms",
+          "signature": "public List getAllFilms()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmByID",
+          "signature": "public Film getFilmByID(int id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmsByTitle",
+          "signature": "public List getFilmsByTitle(String title)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getAvailableFilms",
+          "signature": "public List getAvailableFilms()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getAvailableFilmCount",
+          "signature": "public Integer getAvailableFilmCount(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmsByCategory",
+          "signature": "public List getFilmsByCategory(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmsByActor",
+          "signature": "public List getFilmsByActor(Integer id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "save",
+          "signature": "public void save(Film film)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "deleteFilmById",
+          "signature": "public void deleteFilmById(int id)",
+          "complexity": 3,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "filmRepository",
+          "type": "FilmRepository",
+          "modifiers": [
+            "private",
+            "final"
+          ]
+        }
+      ],
+      "summary": "### Analysis of FilmService Java Class\n\n1. **Purpose**: The main purpose of this class is to provide a service layer for managing film-related data and operations.\n2. **Responsibilities**: The key responsibilities of this class include retrieving, saving, and deleting film data, as well as providing filtered lists of films based on various criteria.\n3. **Key Methods**:\n   * `getAllFilms()`: Retrieves a list of all films.\n   * `getFilmByID(int id)`: Retrieves a film by its ID.\n   * `save(Film film)`: Saves a film to the repository.\n   * `deleteFilmById(int id)`: Deletes a film by its ID.\n4. **Complexity Assessment**: The overall complexity of this class is moderate, with most methods having a complexity of 2 or 3. This suggests that the class is relatively straightforward and easy to maintain.\n5. **Design Patterns**: This class appears to use the **Repository Pattern**, as evidenced by the `filmRepository` field, which encapsulates data access and manipulation. Additionally, the class follows the **Service Layer Pattern**, which separates business logic from data access and presentation layers."
+    },
+    {
+      "name": "Order",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 6,
+      "field_count": 3,
+      "avg_complexity": 3.0,
+      "methods": [
+        {
+          "name": "getCustomer",
+          "signature": "public Customer getCustomer()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setCustomer",
+          "signature": "public void setCustomer(Customer customer)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilm",
+          "signature": "public Film getFilm()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFilm",
+          "signature": "public void setFilm(Film film)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getRental",
+          "signature": "public Rental getRental()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setRental",
+          "signature": "public void setRental(Rental rental)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "customer",
+          "type": "Customer",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "film",
+          "type": "Film",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "rental",
+          "type": "Rental",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the Order Class\n\n1. **Purpose**: The main purpose of this class is to represent an order, likely in a video rental system, encapsulating customer, film, and rental information.\n2. **Responsibilities**: The key responsibilities of this class are to store and manage order data, including customer, film, and rental details.\n3. **Key Methods**:\n   - `getCustomer()`: Retrieves the customer associated with the order.\n   - `setCustomer(Customer customer)`: Sets the customer for the order.\n   - `getFilm()`, `setFilm(Film film)`, `getRental()`, `setRental(Rental rental)`: Similar getter and setter methods for film and rental information.\n4. **Complexity Assessment**: The overall complexity of this class is low to moderate, with a simple structure and straightforward getter and setter methods. The complexity values (2 for getters, 4 for setters) suggest basic operations without intricate logic.\n5. **Design Patterns**: This class appears to follow the **Data Access Object (DAO)** or **Data Transfer Object (DTO)** pattern, focusing on encapsulating data and providing basic access methods. It may also be part of a larger **Model-View-Controller (MVC)** or **Model-View-ViewModel (MVVM)** architecture, given its role in managing order data."
+    },
+    {
+      "name": "Film",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 24,
+      "field_count": 11,
+      "avg_complexity": 5.54,
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getTitle",
+          "signature": "public String getTitle()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setTitle",
+          "signature": "public void setTitle(String title)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getDescription",
+          "signature": "public String getDescription()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setDescription",
+          "signature": "public void setDescription(String description)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getReleaseYear",
+          "signature": "public int getReleaseYear()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setReleaseYear",
+          "signature": "public void setReleaseYear(int releaseYear)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getRentalDuration",
+          "signature": "public Integer getRentalDuration()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setRentalDuration",
+          "signature": "public void setRentalDuration(Integer rentalDuration)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getRentalRate",
+          "signature": "public BigDecimal getRentalRate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setRentalRate",
+          "signature": "public void setRentalRate(BigDecimal rentalRate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLength",
+          "signature": "public Integer getLength()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLength",
+          "signature": "public void setLength(Integer length)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getReplacementCost",
+          "signature": "public BigDecimal getReplacementCost()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setReplacementCost",
+          "signature": "public void setReplacementCost(BigDecimal replacementCost)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getRating",
+          "signature": "public String getRating()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setRating",
+          "signature": "public void setRating(String rating)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getSpecialFeatures",
+          "signature": "public String getSpecialFeatures()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setSpecialFeatures",
+          "signature": "public void setSpecialFeatures(String specialFeatures)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 54,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 13,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "filmId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "releaseYear",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "rentalDuration",
+          "type": "Integer",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "rentalRate",
+          "type": "BigDecimal",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "length",
+          "type": "Integer",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "replacementCost",
+          "type": "BigDecimal",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "rating",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "specialFeatures",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the Film Class\n\n#### 1. Purpose\nThe main purpose of this class is to represent a film entity, encapsulating its properties and behaviors.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Storing film attributes such as film ID, title, description, release year, etc.\n- Providing getter and setter methods for these attributes.\n- Implementing equality and hash code checks.\n\n#### 3. Key Methods\nThe most important methods in this class are:\n- `getFilmId()` and `setFilmId(int filmId)`: Accessors for the film's unique identifier.\n- `equals(Object o)`: Compares the current object with another for equality.\n- `hashCode()`: Returns a hash code value for the object.\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is moderate. The majority of methods are simple getters and setters, but the `equals` method has a higher complexity due to its implementation details.\n\n#### 5. Design Patterns\nThis class follows the **Bean Pattern** (or JavaBean), which is a simple, standard way to represent objects in Java, using private fields and public getter and setter methods. It also implicitly follows the **Single Responsibility Principle (SRP)** by focusing on representing a film entity, though it could be argued that the equality and hash code logic, while standard, adds a secondary responsibility."
+    },
+    {
+      "name": "Customer",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 16,
+      "field_count": 7,
+      "avg_complexity": 5.5,
+      "methods": [
+        {
+          "name": "getCustomerId",
+          "signature": "public int getCustomerId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setCustomerId",
+          "signature": "public void setCustomerId(int customerId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getEmail",
+          "signature": "public String getEmail()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setEmail",
+          "signature": "public void setEmail(String email)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActive",
+          "signature": "public byte getActive()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setActive",
+          "signature": "public void setActive(byte active)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCreateDate",
+          "signature": "public Timestamp getCreateDate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setCreateDate",
+          "signature": "public void setCreateDate(Timestamp createDate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 37,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 9,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "customerId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastName",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "active",
+          "type": "byte",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "createDate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the Customer Java Class\n\n#### 1. Purpose\nThe main purpose of this class is to represent a customer entity, encapsulating its properties and behaviors.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Storing customer data (e.g., ID, name, email, active status)\n- Providing access to customer data through getter and setter methods\n- Implementing equality and hash code logic for customer objects\n\n#### 3. Key Methods\nThe most important methods in this class are:\n- `getCustomerId()` and `setCustomerId(int customerId)`: Access and modify the customer's ID\n- `equals(Object o)`: Compares two customer objects for equality\n- `hashCode()`: Generates a hash code for a customer object\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is relatively low, with a simple structure and straightforward methods. However, the `equals(Object o)` method has a higher complexity (37) due to its implementation details.\n\n#### 5. Design Patterns\nThis class follows the **Data Access Object (DAO)** or **Plain Old Java Object (POJO)** pattern, focusing on encapsulating data and providing basic access methods. It also implements the **equals()** and **hashCode()** methods, which is a common practice in Java to ensure proper object comparison and hashing."
+    },
+    {
+      "name": "Inventory",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 8,
+      "field_count": 3,
+      "avg_complexity": 5.0,
+      "methods": [
+        {
+          "name": "getInventoryId",
+          "signature": "public int getInventoryId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setInventoryId",
+          "signature": "public void setInventoryId(int inventoryId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 18,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "inventoryId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "filmId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the Inventory Java Class\n\n#### 1. Purpose\nThe main purpose of this class is to represent an inventory item, likely in a film rental or management system, encapsulating its properties and behavior.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Managing the inventory item's identifier\n- Tracking the associated film's identifier\n- Recording the last update timestamp\n- Providing methods for equality comparison and hashing\n\n#### 3. Key Methods\nThe most important methods are:\n- `getInventoryId()` and `setInventoryId(int inventoryId)`: Accessors for the inventory item's identifier\n- `equals(Object o)`: Compares the current object with another for equality, crucial for collections and comparisons\n- `hashCode()`: Generates a hash code for the object, necessary for hash-based collections and efficient lookups\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is relatively low, with most methods having a complexity of 2 or 4. The `equals(Object o)` method has a higher complexity of 18, which is typical for equality comparison methods that need to handle various scenarios, including null checks and type comparisons.\n\n#### 5. Design Patterns\nThis class appears to follow the **Data Access Object (DAO)** or **Data Transfer Object (DTO)** pattern, focusing on encapsulating data and providing basic accessor methods. It does not seem to implement any complex behavioral patterns, keeping its design straightforward and simple."
+    },
+    {
+      "name": "FilmActorPK",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [
+        "Serializable"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 6,
+      "field_count": 2,
+      "avg_complexity": 5.5,
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public Integer getActorId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 17,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "actorId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "filmId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of FilmActorPK Java Class\n\n1. **Purpose**: The main purpose of this class is to serve as a primary key for a many-to-many relationship between Film and Actor entities, likely in a database context.\n2. **Responsibilities**: The key responsibilities of this class are to hold and manage the identifiers of a film and an actor, and to provide methods for comparing and hashing instances.\n3. **Key Methods**:\n   - `getActorId()` and `getFilmId()`: Retrieve the actor and film IDs, respectively.\n   - `equals(Object o)`: Compares the current object with another for equality, considering both actor and film IDs.\n   - `hashCode()`: Generates a hash code based on the actor and film IDs.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low, with a simple structure and straightforward methods. However, the `equals` method has a higher complexity due to its conditional logic.\n5. **Design Patterns**: This class implements the **Serializable** interface, indicating it can be converted to a byte stream for storage or transmission. It also follows the **Immutable** pattern, as its state (actor and film IDs) can be set only through constructors or setter methods, and it provides methods for comparison and hashing, which is typical for value objects or primary key classes."
+    },
+    {
+      "name": "Category",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 8,
+      "field_count": 3,
+      "avg_complexity": 5.62,
+      "methods": [
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(int categoryId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getName",
+          "signature": "public String getName()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setName",
+          "signature": "public void setName(String name)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 22,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 5,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "categoryId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the Category Java Class\n\n1. **Purpose**: The main purpose of this class is to represent a category entity, likely in a database or data storage context, encapsulating its properties and behavior.\n2. **Responsibilities**: The class is responsible for storing and managing category data, including its ID, name, and last update timestamp.\n3. **Key Methods**:\n   - `getCategoryId()` and `setCategoryId(int categoryId)`: Accessor and mutator for the category ID.\n   - `equals(Object o)`: Compares the current object with another for equality, which is crucial for data integrity and comparison operations.\n   - `hashCode()`: Generates a hash code for the object, important for storing and retrieving objects in hash-based data structures.\n4. **Complexity Assessment**: The overall complexity of the class is relatively low, with most methods having a complexity of 2 or 4. However, the `equals(Object o)` method has a higher complexity of 22, which might indicate a detailed comparison logic that could potentially be optimized or simplified.\n5. **Design Patterns**: The class follows the **Encapsulation** principle, a fundamental concept in object-oriented programming, by making its fields private and providing public methods to access and modify them. It also implements the `equals` and `hashCode` methods, which is a common practice in Java for objects that need to be compared or stored in collections, reflecting the **Value Object** pattern."
+    },
+    {
+      "name": "FilmCategoryPK",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [
+        "Serializable"
+      ],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 6,
+      "field_count": 2,
+      "avg_complexity": 5.5,
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(int categoryId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 17,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "filmId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "categoryId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of FilmCategoryPK Java Class\n\n1. **Purpose**: The main purpose of this class is to represent a composite primary key for a film category, likely used in a database context.\n2. **Responsibilities**: The key responsibilities of this class are to store and manage film and category IDs, and provide methods for equality and hashing.\n3. **Key Methods**:\n   * `getFilmId()` and `getCategoryId()`: Retrieve the film and category IDs.\n   * `equals(Object o)`: Compares the current object with another for equality.\n   * `hashCode()`: Returns a hash code value for the object.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low, with a simple structure and straightforward methods. However, the `equals` method has a higher complexity due to its implementation details.\n5. **Design Patterns**: This class implements the **Serializable** interface, indicating that it can be converted to a byte stream for storage or transmission. It also follows the **Immutable** pattern, as it has private fields and provides getter and setter methods for access and modification. Additionally, it overrides the `equals` and `hashCode` methods, which is a common practice in Java for custom classes, following the **Value Object** pattern."
+    },
+    {
+      "name": "FilmActor",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 8,
+      "field_count": 3,
+      "avg_complexity": 5.5,
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public int getActorId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 21,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 5,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "actorId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "filmId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the FilmActor Java Class\n\n1. **Purpose**: The main purpose of this class is to represent a relationship between a film and an actor, likely in a database or data storage context.\n2. **Responsibilities**: The key responsibilities of this class are to store and manage the actor ID, film ID, and last update timestamp, and provide methods for accessing and modifying these values.\n3. **Key Methods**:\n\t* `getActorId()` and `setActorId(int actorId)`: Access and modify the actor ID.\n\t* `getFilmId()` and `setFilmId(int filmId)`: Access and modify the film ID.\n\t* `equals(Object o)`: Compares the current object with another object for equality.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low, with a simple structure and straightforward methods. However, the `equals(Object o)` method has a higher complexity (21) compared to other methods, which may indicate a more complex implementation.\n5. **Design Patterns**: This class appears to follow the **Data Access Object (DAO)** or **Data Transfer Object (DTO)** pattern, where it represents a simple data entity with getter and setter methods. No other complex design patterns are evident in this class."
+    },
+    {
+      "name": "FilmCategory",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 8,
+      "field_count": 3,
+      "avg_complexity": 5.5,
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(Integer filmId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCategoryId",
+          "signature": "public int getCategoryId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setCategoryId",
+          "signature": "public void setCategoryId(Integer categoryId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 21,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 5,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "filmId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "categoryId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of FilmCategory Java Class\n\n#### 1. Purpose\nThe main purpose of this class is to represent a many-to-many relationship between films and categories, likely in a database-driven application.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Storing film and category IDs\n- Tracking the last update timestamp\n- Providing getter and setter methods for these fields\n- Implementing equality and hash code logic\n\n#### 3. Key Methods\nThe most important methods are:\n- `getFilmId()` and `setFilmId(Integer filmId)`: Access and modify the film ID.\n- `getCategoryId()` and `setCategoryId(Integer categoryId)`: Access and modify the category ID.\n- `equals(Object o)`: Compares the current object with another for equality, which is crucial for using instances in collections.\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is relatively low, with most methods having a complexity of 2 or 4. The `equals(Object o)` method has a higher complexity of 21, which is typical for equality checks involving multiple fields.\n\n#### 5. Design Patterns\nThis class appears to follow the **Data Access Object (DAO)** or **Data Transfer Object (DTO)** pattern, as it encapsulates data and provides basic getter and setter methods. The implementation of `equals` and `hashCode` methods also aligns with the **Value Object** pattern, ensuring proper behavior when used in collections."
+    },
+    {
+      "name": "Actor",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 10,
+      "field_count": 4,
+      "avg_complexity": 5.6,
+      "methods": [
+        {
+          "name": "getActorId",
+          "signature": "public int getActorId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setActorId",
+          "signature": "public void setActorId(int actorId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 26,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 6,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "actorId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastName",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the Actor Java Class\n\n#### 1. Purpose\nThe main purpose of this class is to represent an actor entity, encapsulating its properties and behaviors.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Managing actor's personal details (ID, first name, last name)\n- Tracking the last update timestamp\n- Providing methods for accessing and modifying these details\n\n#### 3. Key Methods\nThe most important methods in this class are:\n- `getActorId()` and `setActorId(int actorId)`: Access and modify the actor's ID.\n- `equals(Object o)`: Compares the current object with another for equality, considering all fields.\n- `hashCode()`: Generates a hash code based on the object's fields.\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is relatively low, with most methods having a complexity of 2 or 4. The `equals(Object o)` method has a higher complexity of 26, which is typical for equality checks involving multiple fields.\n\n#### 5. Design Patterns\nThis class follows the **Data Access Object (DAO)** or **Plain Old Java Object (POJO)** pattern, focusing on encapsulating data and providing basic getter and setter methods for data access and manipulation. It also overrides `equals` and `hashCode` methods, which is a good practice for objects that will be used in collections or compared for equality."
+    },
+    {
+      "name": "Staff",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 20,
+      "field_count": 9,
+      "avg_complexity": 5.8,
+      "methods": [
+        {
+          "name": "getStaffId",
+          "signature": "public int getStaffId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setStaffId",
+          "signature": "public void setStaffId(int staffId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getFirstName",
+          "signature": "public String getFirstName()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFirstName",
+          "signature": "public void setFirstName(String firstName)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastName",
+          "signature": "public String getLastName()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastName",
+          "signature": "public void setLastName(String lastName)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getPicture",
+          "signature": "public byte getPicture()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setPicture",
+          "signature": "public void setPicture(byte picture)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getEmail",
+          "signature": "public String getEmail()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setEmail",
+          "signature": "public void setEmail(String email)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getActive",
+          "signature": "public byte getActive()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setActive",
+          "signature": "public void setActive(byte active)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getUsername",
+          "signature": "public String getUsername()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setUsername",
+          "signature": "public void setUsername(String username)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getPassword",
+          "signature": "public String getPassword()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setPassword",
+          "signature": "public void setPassword(String password)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 45,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 17,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "staffId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastName",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "picture",
+          "type": "byte",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "active",
+          "type": "byte",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "username",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "password",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the Staff Java Class\n\n#### 1. Purpose\nThe main purpose of this class is to represent a staff member, encapsulating their attributes and providing getter and setter methods for data access.\n\n#### 2. Responsibilities\nThe key responsibilities of this class include:\n- Storing staff member data (e.g., ID, name, email, username, password)\n- Providing access to this data through getter and setter methods\n- Implementing basic object comparison methods (equals, hashCode)\n\n#### 3. Key Methods\nThe most important methods in this class are:\n- `getStaffId()` and `setStaffId(int staffId)`: Access and modify the staff member's ID.\n- `equals(Object o)`: Compares the current object with another for equality.\n- `hashCode()`: Returns a hash code value for the object, used in collections.\n\n#### 4. Complexity Assessment\nThe overall complexity of this class is relatively low. Most methods are simple getters and setters, with the `equals` and `hashCode` methods being slightly more complex due to their implementation details. However, the class does not contain any complex logic or algorithms, making it straightforward to understand and maintain.\n\n#### 5. Design Patterns\nThis class follows the **Data Access Object (DAO)** or **Plain Old Java Object (POJO)** pattern, focusing on encapsulating data and providing basic access methods. It does not explicitly implement any other design patterns like Singleton, Factory, or Observer. The use of getter and setter methods adheres to the principles of **Encapsulation**, a fundamental concept in object-oriented programming."
+    },
+    {
+      "name": "Rental",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 16,
+      "field_count": 7,
+      "avg_complexity": 5.38,
+      "methods": [
+        {
+          "name": "getRentalId",
+          "signature": "public int getRentalId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setRentalId",
+          "signature": "public void setRentalId(int rentalId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getRentalDate",
+          "signature": "public Timestamp getRentalDate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setRentalDate",
+          "signature": "public void setRentalDate(Timestamp rentalDate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getInventoryId",
+          "signature": "public int getInventoryId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setInventoryId",
+          "signature": "public void setInventoryId(int inventoryId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getCustomerId",
+          "signature": "public int getCustomerId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setCustomerId",
+          "signature": "public void setCustomerId(int customerId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getReturnDate",
+          "signature": "public Timestamp getReturnDate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setReturnDate",
+          "signature": "public void setReturnDate(Timestamp returnDate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getStaffId",
+          "signature": "public int getStaffId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setStaffId",
+          "signature": "public void setStaffId(int staffId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getLastUpdate",
+          "signature": "public Timestamp getLastUpdate()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setLastUpdate",
+          "signature": "public void setLastUpdate(Timestamp lastUpdate)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 35,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 9,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "rentalId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "rentalDate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "inventoryId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "customerId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "returnDate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "lastUpdate",
+          "type": "Timestamp",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "staffId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of the Rental Class\n\n1. **Purpose**: The main purpose of this class is to represent a rental entity, likely in a video rental or similar system, encapsulating its properties and behaviors.\n2. **Responsibilities**: The key responsibilities of this class include storing and managing rental data, such as rental ID, date, customer, and staff information, and providing access to this data through getter and setter methods.\n3. **Key Methods**:\n   - `getRentalId()` and `setRentalId(int rentalId)`: Access and modify the rental ID.\n   - `getRentalDate()` and `setRentalDate(Timestamp rentalDate)`: Access and modify the rental date.\n   - `equals(Object o)` and `hashCode()`: Override these methods for proper object comparison and hashing, crucial for using instances in collections.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low, with most methods having a complexity of 2 or 4, indicating simple getter and setter operations. The `equals` method has a higher complexity (35), which is typical for overriding this method to compare objects based on their fields.\n5. **Design Patterns**: This class follows the **Data Access Object (DAO)** or **Data Transfer Object (DTO)** pattern, focusing on encapsulating data and providing basic access and modification methods. It also adheres to the **Single Responsibility Principle (SRP)** by primarily managing rental data. The override of `equals` and `hashCode` suggests adherence to the **Contract** design principle, ensuring proper behavior when objects are compared or used in hash-based collections."
+    },
+    {
+      "name": "FilmText",
+      "type": "class",
+      "package": "com.sparta.engineering72.sakilaproject.entities",
+      "extends": null,
+      "implements": [],
+      "modifiers": [
+        "public"
+      ],
+      "method_count": 8,
+      "field_count": 3,
+      "avg_complexity": 5.62,
+      "methods": [
+        {
+          "name": "getFilmId",
+          "signature": "public int getFilmId()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setFilmId",
+          "signature": "public void setFilmId(int filmId)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getTitle",
+          "signature": "public String getTitle()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setTitle",
+          "signature": "public void setTitle(String title)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "getDescription",
+          "signature": "public String getDescription()",
+          "complexity": 2,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "setDescription",
+          "signature": "public void setDescription(String description)",
+          "complexity": 4,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "equals",
+          "signature": "public boolean equals(Object o)",
+          "complexity": 22,
+          "modifiers": [
+            "public"
+          ]
+        },
+        {
+          "name": "hashCode",
+          "signature": "public int hashCode()",
+          "complexity": 5,
+          "modifiers": [
+            "public"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "filmId",
+          "type": "int",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "modifiers": [
+            "private"
+          ]
+        }
+      ],
+      "summary": "### Analysis of FilmText Java Class\n\n1. **Purpose**: The main purpose of this class is to represent a film with its associated text data, including film ID, title, and description.\n2. **Responsibilities**: The key responsibilities of this class are to store and manage film data, provide access to this data, and support equality checks and hashing.\n3. **Key Methods**:\n   - `getFilmId()` and `setFilmId(int filmId)`: Access and modify the film ID.\n   - `getTitle()` and `setTitle(String title)`: Access and modify the film title.\n   - `equals(Object o)` and `hashCode()`: Support equality checks and hashing, likely for use in collections.\n4. **Complexity Assessment**: The overall complexity of this class is relatively low, with simple getter and setter methods. However, the `equals(Object o)` method has a higher complexity, which may indicate a more intricate implementation to ensure proper equality checks.\n5. **Design Patterns**: This class appears to follow the **Data Access Object (DAO)** or **Data Transfer Object (DTO)** pattern, where it encapsulates data and provides basic access and modification methods. The implementation of `equals` and `hashCode` suggests adherence to the **Value Object** pattern, ensuring proper behavior in collections."
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "CustomerRepository",
+      "type": "interface",
+      "extends": [
+        "JpaRepository"
+      ],
+      "method_count": 8,
+      "methods": [
+        {
+          "name": "getCustomerByCredentials",
+          "signature": "Customer getCustomerByCredentials(String username, Integer password)"
+        },
+        {
+          "name": "getCustomerByUsername",
+          "signature": "Customer getCustomerByUsername(String username)"
+        },
+        {
+          "name": "getCustomersByFirstName",
+          "signature": "List getCustomersByFirstName(String firstName)"
+        },
+        {
+          "name": "getCustomersByLastName",
+          "signature": "List getCustomersByLastName(String lastName)"
+        },
+        {
+          "name": "getCustomersByFullName",
+          "signature": "List getCustomersByFullName(String firstName, String lastName)"
+        },
+        {
+          "name": "getCustomerByCustomerId",
+          "signature": "Customer getCustomerByCustomerId(Integer id)"
+        },
+        {
+          "name": "getCustomerByEmail",
+          "signature": "Customer getCustomerByEmail(String email)"
+        },
+        {
+          "name": "getCustomerCount",
+          "signature": "Integer getCustomerCount()"
+        }
+      ]
+    },
+    {
+      "name": "RentalRepository",
+      "type": "interface",
+      "extends": [
+        "JpaRepository"
+      ],
+      "method_count": 2,
+      "methods": [
+        {
+          "name": "getRentalByRentalId",
+          "signature": "Rental getRentalByRentalId(Integer id)"
+        },
+        {
+          "name": "getRentalByCustomerId",
+          "signature": "List getRentalByCustomerId(Integer customerId)"
+        }
+      ]
+    },
+    {
+      "name": "StaffRepository",
+      "type": "interface",
+      "extends": [
+        "JpaRepository"
+      ],
+      "method_count": 1,
+      "methods": [
+        {
+          "name": "getStaffByUsername",
+          "signature": "Staff getStaffByUsername(String username)"
+        }
+      ]
+    },
+    {
+      "name": "ActorRepository",
+      "type": "interface",
+      "extends": [
+        "JpaRepository"
+      ],
+      "method_count": 4,
+      "methods": [
+        {
+          "name": "findActorsByFirstNameAndLastName",
+          "signature": "List findActorsByFirstNameAndLastName(String firstName, String lastName)"
+        },
+        {
+          "name": "findActorsByFirstName",
+          "signature": "List findActorsByFirstName(String firstName)"
+        },
+        {
+          "name": "findActorsByLastName",
+          "signature": "List findActorsByLastName(String lastName)"
+        },
+        {
+          "name": "getActorByActorId",
+          "signature": "Actor getActorByActorId(Integer id)"
+        }
+      ]
+    },
+    {
+      "name": "FilmRepository",
+      "type": "interface",
+      "extends": [
+        "JpaRepository"
+      ],
+      "method_count": 6,
+      "methods": [
+        {
+          "name": "getAvailableFilmCount",
+          "signature": "Integer getAvailableFilmCount(Integer id)"
+        },
+        {
+          "name": "getAvailableFilms",
+          "signature": "List getAvailableFilms()"
+        },
+        {
+          "name": "getAllFilmsByCategory",
+          "signature": "List getAllFilmsByCategory(Integer categoryId)"
+        },
+        {
+          "name": "getAllFilmsByActor",
+          "signature": "List getAllFilmsByActor(Integer actorId)"
+        },
+        {
+          "name": "findByTitle",
+          "signature": "List findByTitle(String title)"
+        },
+        {
+          "name": "getFilmByFilmId",
+          "signature": "Film getFilmByFilmId(Integer id)"
+        }
+      ]
+    },
+    {
+      "name": "CategoryRepository",
+      "type": "interface",
+      "extends": [
+        "JpaRepository"
+      ],
+      "method_count": 1,
+      "methods": [
+        {
+          "name": "getCategoryByCategoryId",
+          "signature": "Category getCategoryByCategoryId(Integer id)"
+        }
+      ]
+    },
+    {
+      "name": "InventoryRepository",
+      "type": "interface",
+      "extends": [
+        "JpaRepository"
+      ],
+      "method_count": 3,
+      "methods": [
+        {
+          "name": "getInventoriesByInventoryId",
+          "signature": "Inventory getInventoriesByInventoryId(Integer inventoryId)"
+        },
+        {
+          "name": "deleteInventoryByInventoryId",
+          "signature": "void deleteInventoryByInventoryId(Integer id)"
+        },
+        {
+          "name": "getInventoryCount",
+          "signature": "Integer getInventoryCount()"
+        }
+      ]
+    }
+  ]
+}

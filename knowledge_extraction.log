@@ -1,0 +1,167 @@
+2025-11-09 19:14:51 - INFO - ================================================================================
+2025-11-09 19:14:51 - INFO - Java Codebase Knowledge Extractor
+2025-11-09 19:14:51 - INFO - ================================================================================
+2025-11-09 19:14:51 - INFO - 
+================================================================================
+2025-11-09 19:14:51 - INFO - STEP 0: Cloning Repository
+2025-11-09 19:14:51 - INFO - ================================================================================
+2025-11-09 19:14:51 - INFO - Using Git Personal Access Token for authentication
+2025-11-09 19:14:51 - INFO - Cloning repository: https://github.com/username/SakilaProject.git
+2025-11-09 19:14:51 - INFO - Target directory: cloned_code_repo
+2025-11-09 19:14:51 - INFO - Starting clone operation...
+2025-11-09 19:14:52 - ERROR - Failed to clone repository: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- https://*****@github.com/username/SakilaProject.git cloned_code_repo
+  stderr: 'Cloning into 'cloned_code_repo'...
+remote: Repository not found.
+fatal: repository 'https://github.com/username/SakilaProject.git/' not found
+'
+2025-11-09 19:14:52 - ERROR - Repository not found. Check the URL or your access permissions.
+2025-11-09 19:14:52 - ERROR - Failed to clone repository: Cmd('git') failed due to: exit code(128)
+  cmdline: git clone -v -- https://*****@github.com/username/SakilaProject.git cloned_code_repo
+  stderr: 'Cloning into 'cloned_code_repo'...
+remote: Repository not found.
+fatal: repository 'https://github.com/username/SakilaProject.git/' not found
+'
+2025-11-09 19:16:01 - INFO - ================================================================================
+2025-11-09 19:16:01 - INFO - Java Codebase Knowledge Extractor
+2025-11-09 19:16:01 - INFO - ================================================================================
+2025-11-09 19:16:01 - INFO - 
+================================================================================
+2025-11-09 19:16:01 - INFO - STEP 0: Cloning Repository
+2025-11-09 19:16:01 - INFO - ================================================================================
+2025-11-09 19:16:01 - INFO - Using Git Personal Access Token for authentication
+2025-11-09 19:16:01 - INFO - Cloning repository: https://github.com/janjakovacevic/SakilaProject.git
+2025-11-09 19:16:01 - INFO - Target directory: cloned_code_repo
+2025-11-09 19:16:01 - INFO - Starting clone operation...
+2025-11-09 19:16:03 - INFO - ✅ Repository cloned successfully to cloned_code_repo
+2025-11-09 19:16:03 - INFO - 
+Repository Information:
+2025-11-09 19:16:03 - INFO -   - Path: cloned_code_repo
+2025-11-09 19:16:03 - INFO -   - Remote URL: https://***TOKEN***@github.com/janjakovacevic/SakilaProject.git
+2025-11-09 19:16:03 - INFO -   - Branch: master
+2025-11-09 19:16:03 - INFO -   - Latest Commit: bc7d3641
+2025-11-09 19:16:03 - INFO -   - Author: Janja Kovacevic
+2025-11-09 19:16:03 - INFO -   - Message: Update README.md
+2025-11-09 19:16:03 - INFO - 
+Initializing services...
+2025-11-09 19:16:03 - INFO - Initializing vector store...
+2025-11-09 19:16:08 - INFO - 
+================================================================================
+2025-11-09 19:16:08 - INFO - STEP 1: Scanning Repository
+2025-11-09 19:16:08 - INFO - ================================================================================
+2025-11-09 19:16:08 - INFO - Scanning repository: cloned_code_repo
+2025-11-09 19:16:08 - INFO - Found 42 Java files out of 156 total files
+2025-11-09 19:16:08 - INFO - Parsing 1/42: cloned_code_repo/.mvn/wrapper/MavenWrapperDownloader.java
+2025-11-09 19:16:08 - INFO - Parsing 2/42: cloned_code_repo/src/test/java/com/sparta/engineering72/sakilaproject/MockTests.java
+2025-11-09 19:16:08 - INFO - Parsing 3/42: cloned_code_repo/src/test/java/com/sparta/engineering72/sakilaproject/SakilaProjectApplicationTests.java
+2025-11-09 19:16:08 - INFO - Parsing 4/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/SakilaProjectApplication.java
+2025-11-09 19:16:08 - INFO - Parsing 5/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/WebSecurityConfig.java
+2025-11-09 19:16:08 - INFO - Parsing 6/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/SuccessHandler.java
+2025-11-09 19:16:08 - INFO - Parsing 7/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/MvcConfig.java
+2025-11-09 19:16:08 - INFO - Parsing 8/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/UserDetailsServiceImpl.java
+2025-11-09 19:16:08 - INFO - Parsing 9/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/securingweb/FailureHandler.java
+2025-11-09 19:16:08 - INFO - Parsing 10/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/respositories/CustomerRepository.java
+2025-11-09 19:16:08 - INFO - Parsing 11/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/respositories/RentalRepository.java
+2025-11-09 19:16:08 - INFO - Parsing 12/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/respositories/StaffRepository.java
+2025-11-09 19:16:08 - INFO - Parsing 13/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/respositories/ActorRepository.java
+2025-11-09 19:16:08 - INFO - Parsing 14/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/respositories/FilmRepository.java
+2025-11-09 19:16:08 - INFO - Parsing 15/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/respositories/CategoryRepository.java
+2025-11-09 19:16:08 - INFO - Parsing 16/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/respositories/InventoryRepository.java
+2025-11-09 19:16:08 - INFO - Parsing 17/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/controller/StaffController.java
+2025-11-09 19:16:08 - INFO - Parsing 18/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/controller/CustomerController.java
+2025-11-09 19:16:08 - INFO - Parsing 19/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/controller/ActorController.java
+2025-11-09 19:16:08 - INFO - Parsing 20/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/controller/MainController.java
+2025-11-09 19:16:08 - INFO - Parsing 21/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/controller/CategoryController.java
+2025-11-09 19:16:08 - INFO - Parsing 22/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/controller/FilmController.java
+2025-11-09 19:16:08 - INFO - Parsing 23/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/services/StaffService.java
+2025-11-09 19:16:08 - INFO - Parsing 24/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/services/RentalService.java
+2025-11-09 19:16:08 - INFO - Parsing 25/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/services/InventoryService.java
+2025-11-09 19:16:08 - INFO - Parsing 26/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/services/CustomerService.java
+2025-11-09 19:16:08 - INFO - Parsing 27/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/services/CategoryService.java
+2025-11-09 19:16:08 - INFO - Parsing 28/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/services/ActorService.java
+2025-11-09 19:16:08 - INFO - Parsing 29/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/services/FilmService.java
+2025-11-09 19:16:08 - INFO - Parsing 30/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/Order.java
+2025-11-09 19:16:08 - INFO - Parsing 31/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/Film.java
+2025-11-09 19:16:08 - INFO - Parsing 32/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/Customer.java
+2025-11-09 19:16:08 - INFO - Parsing 33/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/Inventory.java
+2025-11-09 19:16:08 - INFO - Parsing 34/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmActorPK.java
+2025-11-09 19:16:08 - INFO - Parsing 35/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/Category.java
+2025-11-09 19:16:08 - INFO - Parsing 36/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmCategoryPK.java
+2025-11-09 19:16:08 - INFO - Parsing 37/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmActor.java
+2025-11-09 19:16:08 - INFO - Parsing 38/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmCategory.java
+2025-11-09 19:16:08 - INFO - Parsing 39/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/Actor.java
+2025-11-09 19:16:08 - INFO - Parsing 40/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/Staff.java
+2025-11-09 19:16:08 - INFO - Parsing 41/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/Rental.java
+2025-11-09 19:16:08 - INFO - Parsing 42/42: cloned_code_repo/src/main/java/com/sparta/engineering72/sakilaproject/entities/FilmText.java
+2025-11-09 19:16:08 - INFO - Successfully parsed 42 files
+2025-11-09 19:16:08 - INFO - 
+Repository Statistics:
+2025-11-09 19:16:08 - INFO -   - Total Files: 42
+2025-11-09 19:16:08 - INFO -   - Total Classes: 35
+2025-11-09 19:16:08 - INFO -   - Total Interfaces: 7
+2025-11-09 19:16:08 - INFO -   - Total Methods: 242
+2025-11-09 19:16:08 - INFO -   - Total Fields: 109
+2025-11-09 19:16:08 - INFO -   - Unique Packages: 6
+2025-11-09 19:16:08 - INFO - 
+================================================================================
+2025-11-09 19:16:08 - INFO - STEP 2: Extracting and Structuring Knowledge
+2025-11-09 19:16:08 - INFO - ================================================================================
+2025-11-09 19:16:08 - INFO - Structuring knowledge...
+2025-11-09 19:16:08 - INFO - Processing 35 classes and 7 interfaces
+2025-11-09 19:16:08 - INFO - Generating project overview...
+2025-11-09 19:16:09 - INFO - Processing class 1/35: MavenWrapperDownloader
+2025-11-09 19:16:10 - INFO - Processing class 2/35: MockTests
+2025-11-09 19:16:11 - INFO - Processing class 3/35: SakilaProjectApplicationTests
+2025-11-09 19:16:12 - INFO - Processing class 4/35: SakilaProjectApplication
+2025-11-09 19:16:13 - INFO - Processing class 5/35: WebSecurityConfig
+2025-11-09 19:16:14 - INFO - Processing class 6/35: SuccessHandler
+2025-11-09 19:16:15 - INFO - Processing class 7/35: MvcConfig
+2025-11-09 19:16:16 - INFO - Processing class 8/35: UserDetailsServiceImpl
+2025-11-09 19:16:17 - INFO - Processing class 9/35: FailureHandler
+2025-11-09 19:16:18 - INFO - Processing class 10/35: StaffController
+2025-11-09 19:16:19 - INFO - Processing class 11/35: CustomerController
+2025-11-09 19:16:20 - INFO - Processing class 12/35: ActorController
+2025-11-09 19:16:20 - INFO - Processing class 13/35: MainController
+2025-11-09 19:16:21 - INFO - Processing class 14/35: CategoryController
+2025-11-09 19:16:22 - INFO - Processing class 15/35: FilmController
+2025-11-09 19:16:23 - INFO - Processing class 16/35: StaffService
+2025-11-09 19:16:24 - INFO - Processing class 17/35: RentalService
+2025-11-09 19:16:25 - INFO - Processing class 18/35: InventoryService
+2025-11-09 19:16:25 - INFO - Processing class 19/35: CustomerService
+2025-11-09 19:16:26 - INFO - Processing class 20/35: CategoryService
+2025-11-09 19:16:27 - INFO - Processing class 21/35: ActorService
+2025-11-09 19:16:28 - INFO - Processing class 22/35: FilmService
+2025-11-09 19:16:29 - INFO - Processing class 23/35: Order
+2025-11-09 19:16:30 - INFO - Processing class 24/35: Film
+2025-11-09 19:16:31 - INFO - Processing class 25/35: Customer
+2025-11-09 19:16:33 - INFO - Processing class 26/35: Inventory
+2025-11-09 19:16:37 - INFO - Processing class 27/35: FilmActorPK
+2025-11-09 19:16:41 - INFO - Processing class 28/35: Category
+2025-11-09 19:16:44 - INFO - Processing class 29/35: FilmCategoryPK
+2025-11-09 19:16:47 - INFO - Processing class 30/35: FilmActor
+2025-11-09 19:16:51 - INFO - Processing class 31/35: FilmCategory
+2025-11-09 19:16:54 - INFO - Processing class 32/35: Actor
+2025-11-09 19:16:58 - INFO - Processing class 33/35: Staff
+2025-11-09 19:17:04 - INFO - Processing class 34/35: Rental
+2025-11-09 19:17:09 - INFO - Processing class 35/35: FilmText
+2025-11-09 19:17:13 - INFO - 
+================================================================================
+2025-11-09 19:17:13 - INFO - STEP 3: Storing in Vector Database
+2025-11-09 19:17:13 - INFO - ================================================================================
+2025-11-09 19:17:13 - INFO - Storing knowledge in vector database...
+2025-11-09 19:17:15 - INFO - Vector database updated successfully
+2025-11-09 19:17:15 - INFO - 
+================================================================================
+2025-11-09 19:17:15 - INFO - STEP 4: Saving Results
+2025-11-09 19:17:15 - INFO - ================================================================================
+2025-11-09 19:17:15 - INFO - 
+================================================================================
+2025-11-09 19:17:15 - INFO - ✅ EXTRACTION COMPLETE!
+2025-11-09 19:17:15 - INFO - ================================================================================
+2025-11-09 19:17:15 - INFO - 📄 Results saved to: structured_knowledge.json
+2025-11-09 19:17:15 - INFO - 📊 Processed Classes: 35
+2025-11-09 19:17:15 - INFO - 📦 Processed Interfaces: 7
+2025-11-09 19:17:15 - INFO - 🔧 Total Methods: 242
+2025-11-09 19:17:15 - INFO - 📁 Unique Packages: 6
+2025-11-09 19:17:15 - INFO - ⚙️  Average Complexity: 9.99
+2025-11-09 19:17:15 - INFO - ================================================================================

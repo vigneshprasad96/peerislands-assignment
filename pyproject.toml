@@ -1,0 +1,28 @@
+[project]
+name = "peerislands-assignment"
+version = "0.1.0"
+description = "A project to analyse a given code repo and derive insights out of it."
+authors = [
+    {name = "Vignesh Prasad"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=1.0.0",
+    "javalang>=0.13.0",
+    "langchain>=0.3.11",
+    "langchain-core>=0.3.21",
+    "langchain-groq>=0.2.1",
+    "langchain-huggingface>=0.1.2",
+    "langchain-chroma>=0.1.4",
+    "langchain-text-splitters>=0.3.2",
+    "chromadb>=0.5.23",
+    "sentence-transformers>=3.3.1",
+    "pydantic>=2.10.3",
+    "typing-extensions>=4.12.2",
+    "gitpython (>=3.1.45,<4.0.0)",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
